@@ -1,38 +1,122 @@
-.App {
-  text-align: center;
+html, body{
+    margin: 0;
+    height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+div.todo-list{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    background-color: #dedede;
+    padding: 20px;
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    align-items: flex-end;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h1.todo-heading{
+    margin: 10px 0;
+    width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+div.input-field{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 15px 0;
+}
+div.input-field p{
+    margin: auto;
+    font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+div.input-field input{
+    margin: auto;
+    width: 80%;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+button{
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #5b91b5;
+    color: whitesmoke;
+    margin: 0 15px;
+}
+
+button:hover{
+    background-color: rgba(49, 74, 99, 0.8);
+}
+
+button:active{
+    transform: scale(1.2);
+}
+
+ul.tasks{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+ul.tasks .task{
+    width: 90%;
+    padding: 5px 5%;
+    background-color: whitesmoke;
+    border: 1px solid darkgrey;
+    border-collapse: collapse;
+    margin-bottom: 1px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+
+ul.tasks .task p{
+    margin: 0;
+    width: 87%;
+}
+
+ul.tasks .task button{
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    margin: auto;
+}
+
+ul.tasks .task button.mark-as-done{
+    background: forestgreen;
+}
+
+ul.tasks .task button.delete{
+    background-color: crimson;
+}
+
+ul.tasks .task button.mark-as-done:hover{
+    background: rgba(34, 139, 34, 0.55);
+}
+
+ul.tasks .task button.delete:hover{
+    background-color: rgba(220, 20, 60, 0.55);
+}
+
+ul.tasks .task button.mark-as-done:active{
+    background: rgb(34, 139, 34);
+    transform: scale(1.45);
+}
+
+ul.tasks .task button.delete:active{
+    background-color: rgb(220, 20, 60);
+    transform: scale(1.45);
 }
